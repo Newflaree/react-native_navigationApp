@@ -1,4 +1,5 @@
 package com.navigationapp;
+import android.os.Bundle;
 
 import android.app.Application;
 import android.content.Context;
@@ -87,5 +88,14 @@ public class MainApplication extends Application implements ReactApplication {
         e.printStackTrace();
       }
     }
+  }
+
+  public class MainActivity extends ReactActivity {
+    // ...
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+      super.onCreate(null);
+    }
+    // ...
   }
 }
