@@ -4,7 +4,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import {
   Page1Screen,
   Page2Screen,
-  Page3Screen
+  Page3Screen,
+  UserScreen
 } from '../screens';
 
 
@@ -34,6 +35,9 @@ export const StackNavigator = () => {
           title: '3ra Page'
         }}
       />
+
+
+      <Stack.Screen name='UserScreen' component={ UserScreen } />
     </Stack.Navigator>
   );
 }

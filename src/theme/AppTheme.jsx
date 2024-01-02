@@ -9,5 +9,10 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 30,
     marginBottom: 10
+  },
+  subTitle: {
+    textAlign: 'center',
+    fontSize: 20,
+    marginBottom: 10
   }
 });
