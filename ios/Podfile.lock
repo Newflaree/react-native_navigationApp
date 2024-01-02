@@ -370,6 +370,10 @@ PODS:
     - React-jsi (= 0.70.14)
     - React-logger (= 0.70.14)
     - React-perflogger (= 0.70.14)
+  - RNCMaskedView (0.3.1):
+    - React-Core
+  - RNGestureHandler (2.14.0):
+    - React-Core
   - RNScreens (3.29.0):
     - React-Core
     - React-RCTImage
@@ -438,6 +442,8 @@ DEPENDENCIES:
   - React-RCTVibration (from `../node_modules/react-native/Libraries/Vibration`)
   - React-runtimeexecutor (from `../node_modules/react-native/ReactCommon/runtimeexecutor`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
+  - "RNCMaskedView (from `../node_modules/@react-native-masked-view/masked-view`)"
+  - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNScreens (from `../node_modules/react-native-screens`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
@@ -528,6 +534,10 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/runtimeexecutor"
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
+  RNCMaskedView:
+    :path: "../node_modules/@react-native-masked-view/masked-view"
+  RNGestureHandler:
+    :path: "../node_modules/react-native-gesture-handler"
   RNScreens:
     :path: "../node_modules/react-native-screens"
   Yoga:
@@ -581,6 +591,8 @@ SPEC CHECKSUMS:
   React-RCTVibration: d293c50100c0927379e6a80fab86a219e08792ae
   React-runtimeexecutor: 0d01d03375f996484fcc231ccca3fe604a4a5652
   ReactCommon: dce64235f8548b6e4758647310145f5356c8d0cb
+  RNCMaskedView: 090213d32d8b3bb83a4dcb7d12c18f0152591906
+  RNGestureHandler: 4279931048471f17faf46d912b2e96e10f1da99b
   RNScreens: fa9b582d85ae5d62c91c66003b5278458fed7aaa
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
   Yoga: 56413d530d1808044600320ced5baa883acedc44
