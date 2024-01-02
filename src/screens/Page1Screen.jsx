@@ -16,14 +16,33 @@ export const Page1Screen = ({ navigation }) => {
 
       <Text style={ styles.subTitle }>Navegar con Argumentos</Text>
 
-      <TouchableOpacity
-        onPress={ () => navigation.navigate( 'UserScreen', {
-          id: 1,
-          name: 'Pedro'
-        })}
-      >
-        <Text>Pedro</Text>
-      </TouchableOpacity>
+      <View style={{ flexDirection: 'row' }}>
+        <TouchableOpacity
+          style={{
+            ...styles.bigButton,
+            backgroundColor: '#5856D6'
+          }}
+          onPress={ () => navigation.navigate( 'UserScreen', {
+            id: 1,
+            name: 'Pedro'
+          })}
+        >
+          <Text style={ styles.buttonText }>Pedro</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={{
+            ...styles.bigButton,
+            backgroundColor: '#FF9427'
+          }}
+          onPress={ () => navigation.navigate( 'UserScreen', {
+            id: 2,
+            name: 'Maria'
+          })}
+        >
+          <Text style={ styles.buttonText }>Maria</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 }

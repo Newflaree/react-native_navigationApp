@@ -14,5 +14,20 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 20,
     marginBottom: 10
+  },
+  bigButton: {
+    width: 100,
+    height: 100,
+    marginLeft: 10,
+    backgroundColor: 'red',
+    borderRadius: 20,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  buttonText: {
+    color: 'white',
+    fontSize: 18,
+    fontWeight: 'bold'
   }
 });
+
