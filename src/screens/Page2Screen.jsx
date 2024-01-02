@@ -1,9 +1,17 @@
+import {useEffect} from 'react';
 import { Button, View, Text } from 'react-native';
 // Styles
 import { styles } from '../theme';
 
 
 export const Page2Screen = ({ navigation }) => {
+  useEffect( ()=> {
+    navigation.setOptions({
+      title: 'Segunda',
+      headerBackTitle: 'Anterior'
+    });
+  }, [] );
+
   return (
     <View style={ styles.globalMargin }>
       <Text>Page2Screen</Text>

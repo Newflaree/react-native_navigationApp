@@ -12,10 +12,28 @@ const Stack = createStackNavigator();
 
 export const StackNavigator = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      //initialRouteName='Page2Screen'
+      screenOptions={{
+        headerStyle: {
+          elevation: 0,
+          shadowColor: 'transparent'
+        },
+        cardStyle: {
+          backgroudColor: 'white'
+        }
+      }}
+    >
       <Stack.Screen name='Page1Screen' component={ Page1Screen } />
       <Stack.Screen name='Page2Screen' component={ Page2Screen } />
-      <Stack.Screen name='Page3Screen' component={ Page3Screen } />
+
+      <Stack.Screen
+        name='Page3Screen'
+        component={ Page3Screen }
+        options={{
+          title: '3ra Page'
+        }}
+      />
     </Stack.Navigator>
   );
 }
