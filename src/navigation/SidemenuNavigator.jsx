@@ -1,4 +1,4 @@
-import { Image, Text, View, useWindowDimensions } from 'react-native';
+import { TouchableOpacity, Image, Text, View, useWindowDimensions } from 'react-native';
 import {createDrawerNavigator, DrawerContentScrollView} from "@react-navigation/drawer";
 import {SettingsScreen} from "../screens";
 import {StackNavigator} from "./StackNavigator";
@@ -30,11 +30,12 @@ export const SidemenuNavigator = () => {
   );
 }
 
-const SidemenuContent = ( props ) => {
-  console.log( props );
+const SidemenuContent = ({ navigation }) => {
+  console.log( navigation );
 
   return (
     <DrawerContentScrollView>
+      { /*Avatar*/ }
       <View style={ styles.avatarContainer }>
         <Image
           source={{
@@ -42,6 +43,22 @@ const SidemenuContent = ( props ) => {
           }}
           style={ styles.avatar }
         />
+      </View>
+
+      { /*MenuOptions*/ }
+      <View style={ styles.menuContainer }>
+        <TouchableOpacity
+          style={ styles.menuButton }
+          onPress={ () => navigation.navigate( 'StackNavigator' ) }
+        >
+          <Text style={ styles.menuText }>Navegación Stack</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={ styles.menuButton }
+          onPress={ () => navigation.navigate( 'SettingsScreen' ) }
+        >
+          <Text style={ styles.menuText }>Settings</Text>
+        </TouchableOpacity>
       </View>
     </DrawerContentScrollView>
   );
