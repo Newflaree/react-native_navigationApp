@@ -1,8 +1,14 @@
+import {useEffect} from 'react';
 import { TouchableOpacity, Button,View, Text } from 'react-native';
 import { styles } from '../theme';
 
 
 export const Page1Screen = ({ navigation }) => {
+  useEffect( () => {
+    navigation.setOptions({
+      headerLeft: () => <Text>Hola Mundo</Text>
+    });
+  }, [] )
   
   return (
     <View style={ styles.globalMargin }>

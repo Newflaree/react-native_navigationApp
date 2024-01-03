@@ -1,11 +1,11 @@
 import 'react-native-gesture-handler';
 import {NavigationContainer} from '@react-navigation/native';
-import {StackNavigator} from './src/navigation';
+import {DrawerNavigator, StackNavigator} from './src/navigation';
 
 const App = () => {
   return (
     <NavigationContainer>
-      <StackNavigator />
+      <DrawerNavigator />
     </NavigationContainer>
   );
 }
