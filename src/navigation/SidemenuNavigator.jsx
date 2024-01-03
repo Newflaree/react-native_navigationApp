@@ -3,9 +3,12 @@ import {createDrawerNavigator, DrawerContentScrollView} from "@react-navigation/
 import {SettingsScreen} from "../screens";
 import {StackNavigator} from "./StackNavigator";
 import {styles} from '../theme';
+import {createStackNavigator} from '@react-navigation/stack';
 
 
 const Drawer = createDrawerNavigator();
+
+const Stack = createStackNavigator();
 
 export const SidemenuNavigator = () => {
   const { width } = useWindowDimensions();
@@ -31,8 +34,6 @@ export const SidemenuNavigator = () => {
 }
 
 const SidemenuContent = ({ navigation }) => {
-  console.log( navigation );
-
   return (
     <DrawerContentScrollView>
       { /*Avatar*/ }

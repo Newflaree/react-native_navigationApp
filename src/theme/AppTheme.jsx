@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
   },
   title: {
     textAlign: 'center',
-    fontSize: 30,
+   fontSize: 30,
     marginBottom: 10
   },
   subTitle: {
