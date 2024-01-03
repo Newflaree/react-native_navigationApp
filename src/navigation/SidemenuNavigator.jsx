@@ -17,6 +17,7 @@ export const SidemenuNavigator = () => {
   return (
     <Drawer.Navigator
       screenOptions={{
+        headerShown: false,
         drawerType: width >= 667 ? 'permanent' : 'front'
       }}
       drawerContent={ ( props ) => <SidemenuContent { ...props } /> }
