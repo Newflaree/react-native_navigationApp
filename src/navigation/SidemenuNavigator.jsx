@@ -4,6 +4,7 @@ import {SettingsScreen} from "../screens";
 import {StackNavigator} from "./StackNavigator";
 import {styles} from '../theme';
 import {createStackNavigator} from '@react-navigation/stack';
+import {BottomTabNavigator} from './BottomTabNavigator';
 
 
 const Drawer = createDrawerNavigator();
@@ -21,8 +22,8 @@ export const SidemenuNavigator = () => {
       drawerContent={ ( props ) => <SidemenuContent { ...props } /> }
     >
       <Drawer.Screen
-        name='StackNavigator'
-        component={ StackNavigator }
+        name='BottomTabNavigator'
+        component={ BottomTabNavigator }
       />
 
       <Drawer.Screen
@@ -50,7 +51,7 @@ const SidemenuContent = ({ navigation }) => {
       <View style={ styles.menuContainer }>
         <TouchableOpacity
           style={ styles.menuButton }
-          onPress={ () => navigation.navigate( 'StackNavigator' ) }
+          onPress={ () => navigation.navigate( 'BottomTabNavigator' ) }
         >
           <Text style={ styles.menuText }>Navegación Stack</Text>
         </TouchableOpacity>
