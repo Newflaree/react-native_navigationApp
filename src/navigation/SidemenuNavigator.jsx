@@ -5,6 +5,8 @@ import {StackNavigator} from "./StackNavigator";
 import {styles} from '../theme';
 import {createStackNavigator} from '@react-navigation/stack';
 import {BottomTabNavigator} from './BottomTabNavigator';
+import {colors} from '../theme';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 
 const Drawer = createDrawerNavigator();
@@ -51,16 +53,24 @@ const SidemenuContent = ({ navigation }) => {
       { /*MenuOptions*/ }
       <View style={ styles.menuContainer }>
         <TouchableOpacity
-          style={ styles.menuButton }
+          style={{
+            ...styles.menuButton,
+            flexDirection: 'row'
+          }}
           onPress={ () => navigation.navigate( 'BottomTabNavigator' ) }
         >
-          <Text style={ styles.menuText }>Navegación Stack</Text>
+          <Icon name='file-tray-stacked' size={ 20 } color={ colors.primary } />
+          <Text style={ styles.menuText }> Navegación Stack</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          style={ styles.menuButton }
+          style={{
+            ...styles.menuButton,
+            flexDirection: 'row'
+          }}
           onPress={ () => navigation.navigate( 'SettingsScreen' ) }
         >
-          <Text style={ styles.menuText }>Settings</Text>
+          <Icon name='settings' size={ 23 } color={ colors.primary } />
+          <Text style={ styles.menuText }> Settings</Text>
         </TouchableOpacity>
       </View>
     </DrawerContentScrollView>

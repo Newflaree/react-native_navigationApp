@@ -1,12 +1,22 @@
 import {useEffect} from 'react';
-import { TouchableOpacity, Button,View, Text } from 'react-native';
-import { styles } from '../theme';
+import { TouchableOpacity, Button, View, Text } from 'react-native';
+import { colors, styles } from '../theme';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 
 export const Page1Screen = ({ navigation }) => {
   useEffect( () => {
     navigation.setOptions({
-      headerLeft: () => <Text>Hola Mundo</Text>
+      headerLeft: () => (
+        <TouchableOpacity>
+          <Icon
+            name='menu'
+            size={ 35 }
+            color={ colors.primary }
+            onPress={ () => navigation.toggleDrawer() }
+          />
+        </TouchableOpacity>
+      ) 
     });
   }, [] )
   

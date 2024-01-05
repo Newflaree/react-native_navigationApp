@@ -3,6 +3,8 @@ import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 import {Tab1Screen, Tab2Screen, Tab3Screen, Tab4Screen} from "../screens";
 import {StackNavigator} from "./StackNavigator";
 import {TopTabNavigator} from '.';
+import Icon from 'react-native-vector-icons/Ionicons';
+import {colors} from '../theme';
 
 const Tab = createBottomTabNavigator();
 
@@ -19,26 +21,26 @@ export const BottomTabNavigator = () => {
 
           switch ( route.name ) {
             case 'Tab1Screen':
-              iconName = 'T1'
+              iconName = 'airplane'
               break;
           
-            case 'Tab2Screen':
-              iconName = 'T2'
+            case 'TopTabNavigator':
+              iconName = 'attach'
               break;
           
             case 'Tab3Screen':
-              iconName = 'T3'
+              iconName = 'calendar'
               break;
           
             case 'StackNavigator':
-              iconName = 'ST'
+              iconName = 'chatbubble-ellipses'
               break;
           
             default:
-              return;
+              return 'ellipsis-horizontal'
           }
 
-          return <Text>{ iconName }</Text>
+          return <Icon name={ iconName } size={ 20 } color={ colors.primary } />
         }
       })}
     >

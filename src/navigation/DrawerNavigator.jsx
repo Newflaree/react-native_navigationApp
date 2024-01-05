@@ -19,8 +19,10 @@ export const DrawerNavigator = () => {
     >
       <Drawer.Screen
         name='StackNavigator'
-        options={{ title: 'Home' }}
         component={ StackNavigator }
+        options={{
+          title: 'Home',
+        }}
       />
 
       <Drawer.Screen
